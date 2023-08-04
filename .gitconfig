@@ -1,0 +1,21 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Zed Kaido 
+	email = ekai@tuta.io
+[init]
+	defaultBranch = master
+[core]
+	editor = nvim
+[alias]
+	a = add --all
+	###
+	b = branch
+	ba = branch -a
+	bd = branch -d 
+	bD = branch -D
+	###
+	c = commit
+	cm = commit -m
+	ca = commit --amend
+	###
+	d = diff

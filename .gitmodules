@@ -1,0 +1,19 @@
+[submodule ".emacs.d"]
+	path = .emacs.d
+	url = git@github.com:hlissner/doom-emacs.git
+
+[submodule ".doom.d"]
+	path = .doom.d
+	url = git@github.com:zedkaido/.doom.d.git
+
+[submodule "./config/nvim"]
+	path = .config/nvim
+	url = git@github.com:zedkaido/.nvim.git
+
+[submodule ".qutebrowser"]
+	path = .qutebrowser
+	url = git@github.com:zedkaido/.qutebrowser
+
+[submodule "./config/alacritty"]
+	path = .alacritty
+	url = git@github.com:zedkaido/.alacritty
