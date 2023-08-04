@@ -20,7 +20,12 @@ rm -r /tmp/.dotfiles
 For `submodules`:
 ```bash
 git submodule init # reads `.gitmodules` and sets up internal git data structures to track the submodules
-git submodule update # clones the submodule repositories if they haven't been cloned already.
+git submodule update # clones the submodule repositories if they haven't been cloned already
+```
+```bash
+# (optional)
+cd ~/.dotfiles
+git checkout master # otherwise you will be working in a detached HEAD state
 ```
 
 ---
