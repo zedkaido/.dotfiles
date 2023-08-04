@@ -5,7 +5,7 @@
 # Setup on new user/device
 
 ```bash
-git clone --separate-git-dir=$HOME/.dotfiles git@github.com:zedkaido/.dotfiles.git $HOME
+git clone --recursive --separate-git-dir=$HOME/.dotfiles git@github.com:zedkaido/.dotfiles.git $HOME
 ```
 
 High chances it will error if you have any conflicting dotfiles files in
@@ -15,6 +15,19 @@ your `$HOME` directory. In that case `clone` the repo into a `tmp` folder and
 git clone --separate-git-dir=$HOME/.dotfiles git@github.com:zedkaido/.dotfiles.git /tmp/.dotfiles
 rsync --recursive --verbose --exclude '.git' /tmp/.dotfiles $HOME/
 rm -r /tmp/.dotfiles
+```
+
+For `submodules`:
+```bash
+git submodule init # reads `.gitmodules` and sets up internal git data structures to track the submodules
+git submodule update # fetches the submodule content
+```
+
+The submodules are initially in a detached `HEAD` state so you have to checkout
+a branch or a commit:
+```bash
+cd .doom.d
+git checkout master
 ```
 
 ---
