@@ -53,3 +53,8 @@ dot add .zshrc
 dot commit -m "add .zshrc"
 dot push --set-upstream github master
 ```
+
+For `submodules`:
+```bash
+dot submodule add <repo_url> <submodule_path>
+```

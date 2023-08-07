@@ -1,0 +1,63 @@
+# run on startup (yabai)
+# alias ry='~/.scripts/ry.sh'
+
+alias vi=vim
+alias ec=emacsclient
+alias vim=nvim
+alias svi='sudo vi'
+alias vis='vim "+set si"'
+alias edit='vi'
+alias nvimc='cd ~/.config/nvim'
+alias doom='$HOME/.emacs.d/bin/doom'
+
+# ((https://github.com/zedkaido/.dotfiles))
+alias dot='$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+alias note='nvim +WikiIndex'
+alias today='nvim +WikiJournal'
+
+alias q='exit'
+alias cs='clear;ls'
+alias hs='history | grep $1'
+
+alias la='ls -AF'                   # List all files
+alias ldir='ls -d */'               # List only directories
+alias l.='ls -A | egrep "^\\." '    # List only dotfiles (hidden files)
+alias l1='ls -1AF'                  # List files (one line at a time)
+alias ll='ls -lhAF'                 # List all file details
+alias lg='ls -AF | egrep'           # Grep through filenames (also see, hg)
+alias lp='ls -d "$(pwd)"/*'         # List full paths
+alias lpg='ls -d "$(pwd)"/* | grep' # Grep through filenames but list full path
+alias lt='ls -Alt'                  # Sort by time
+alias ltr='ls -Altr'                # Sort by time (reverse)
+alias lss='ls -AFlS'                # Sort by size
+alias lsr='ls -AFlSr'               # Sort by size (reverse)
+
+alias ff='find . -type f -iname'
+alias fd='find . -type d -iname'
+
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ..2='cd ../../'
+alias ..3='cd ../../../'
+alias ..4='cd ../../../../'
+alias ..5='cd ../../../../..'
+
+alias path='echo -e ${PATH//:/\\n}'
+alias myip='curl http://ipecho.net/plain; echo'
+ 
+alias psgrep='ps aux | grep'
+alias now='date +"%T"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+alias nocomment='grep -Ev '\''^(#|$)'\'''
+
+alias usage='du -ch 2> /dev/null | tail -1'
+alias totalusage='df -hl --total | tail -1'
+alias partusage='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs'
+alias most='du -hsx * | sort -rh | head -10'
+
+alias archive='tar --create --gzip --verbose --file'
+
+alias turnEthernetOff='networksetup -setnetworkserviceenabled "Ethernet" off'
+alias turnEthernetOn='networksetup -setnetworkserviceenabled "Ethernet" on'

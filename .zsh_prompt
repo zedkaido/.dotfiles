@@ -1,0 +1,27 @@
+setopt PROMPT_SUBST
+
+function git_branch() {
+  local branch_name=$(git symbolic-ref --short HEAD 2>/dev/null)
+  if [ -n "$branch_name" ]; then
+    echo " (%F{blue}${branch_name}%f)"
+  fi
+}
+
+funciton relative_path() {
+	echo "%F{#696969}%~%f"
+}
+
+function lambda_symbol() {
+  echo "%F{#696969}λ%f"
+}
+
+function vi_mode_indicator() {
+    if [[ -n "${KEYMAP}" && "${KEYMAP}" == 'vicmd' ]]; then
+        echo '<V>'
+    fi
+}
+
+NEWLINE=$'\n'
+RPROMPT='%T'
+PROMPT='$(relative_path) $(git_branch) $(vi_mode_indicator)${NEWLINE}$(lambda_symbol) '
+PROMPT="$NEWLINE$PROMPT"

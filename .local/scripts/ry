@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+yabai --stop-service
+sudo yabai --load-sa
+#brew services restart yabai
+yabai --start-service
