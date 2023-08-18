@@ -12,7 +12,7 @@
 	url = git@github.com:zedkaido/.alacritty
 [submodule ".config/nvim"]
 	path = .config/nvim
-	url = git@github.com:zedkaido/.config/nvim
+	url = git@github.com:zedkaido/.config/.nvim
 [submodule ".config/alacritty"]
 	path = .config/alacritty
 	url = git@github.com:zedkaido/.alacritty
