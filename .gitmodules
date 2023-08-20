@@ -6,7 +6,7 @@
 	url = git@github.com:zedkaido/.doom.d.git
 [submodule ".qutebrowser"]
 	path = .qutebrowser
-	url = git@github.com:zedkaido/.qutebrowser
+	url = git@github.com:zedkaido/.qutebrowser.git
 [submodule "./config/alacritty"]
 	path = ./config/alacritty
 	url = git@github.com:zedkaido/.alacritty
