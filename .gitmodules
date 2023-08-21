@@ -7,12 +7,9 @@
 [submodule ".qutebrowser"]
 	path = .qutebrowser
 	url = git@github.com:zedkaido/.qutebrowser.git
-[submodule "./config/alacritty"]
-	path = ./config/alacritty
-	url = git@github.com:zedkaido/.alacritty
-[submodule ".config/nvim"]
-	path = .config/nvim
-	url = git@github.com:zedkaido/.config/.nvim
-[submodule ".config/alacritty"]
+[submodule ".alacritty"]
 	path = .config/alacritty
 	url = git@github.com:zedkaido/.alacritty
+[submodule ".nvim"]
+	path = .config/nvim
+	url = git@github.com:zedkaido/.nvim.git

@@ -7,6 +7,12 @@ datediff () {
   echo $(( ($(date -u -d $1 +%s) - $(date -u -d $2 +%s)) / 86400))
 }
 
+function nextDay() {
+  local now=$(date +"%Y-%m-%dT%H:%M:%SZ")
+  local tomorrow=$(date -v "+1d" +"%Y-%m-%dT%H:%M:%SZ")
+  echo $tomorrow
+}
+
 toHex() {
   echo -n $1 | od -A n -t x1
 }
@@ -26,7 +32,6 @@ hexToString() {
     done
     echo -e "$ascii_string"
 }
-
 
 ex () {
   if [ -f $1 ] ; then

@@ -1,5 +1,7 @@
 export GPG_TTY=$(tty)
 
+export BROWSER="qutebrowser"
+export TERMINAL="alacritty"
 export EDITOR="vim"
 export PAGER="less"
 export LESSCHARSET="utf-8"

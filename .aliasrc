@@ -1,13 +1,14 @@
 # run on startup (yabai)
 # alias ry='~/.scripts/ry.sh'
 
-alias vi=vim
-alias ec=emacsclient
 alias vim=nvim
+alias vi=vim
 alias svi='sudo vi'
 alias vis='vim "+set si"'
 alias edit='vi'
 alias nvimc='cd ~/.config/nvim'
+alias vim="stty stop '' -ixoff ; nvim" # https://vim.fandom.com/wiki/Map_Ctrl-S_to_save_current_or_new_files
+alias ec=emacsclient
 alias doom='$HOME/.emacs.d/bin/doom'
 
 # ((https://github.com/zedkaido/.dotfiles))

@@ -34,7 +34,7 @@ zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 
 # Ain't history great?
-HISTSIZE=1234
+HISTSIZE=12345
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
