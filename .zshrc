@@ -13,6 +13,7 @@
 source ~/.aliasrc
 source ~/.funcrc
 source ~/.zsh_prompt
+[ -f "~/.ghcup/env" ] && source "~/.ghcup/env" # ghcup-env
 
 # GPG Launch
 gpgconf --launch gpg-agent
