@@ -19,6 +19,7 @@ gpgconf --launch gpg-agent
 
 # Where should I put you?
 bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^b "tmux-switch-session\n"
 
 # Useful for editing multi-line commands
 bindkey -v
