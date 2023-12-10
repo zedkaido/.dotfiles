@@ -36,14 +36,14 @@ zle -N edit-command-line
 bindkey '^X^E' edit-command-line
 
 # Ain't history great?
-HISTSIZE=12345
-setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_EXPIRE_DUPS_FIRST
+SAVEHIST=12345
+HISTSIZE=1234
+HISTFILE=~/.zsh_history
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
-setopt HIST_IGNORE_SPACE
 setopt HIST_FIND_NO_DUPS
 setopt HIST_SAVE_NO_DUPS
+setopt HIST_NO_STORE
 setopt HIST_IGNORE_SPACE
 bindkey "^R" history-beginning-search-backward
 function fzy-history-selection() {
@@ -62,3 +62,16 @@ then
   autoload -Uz compinit
   compinit
 fi
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/xusr/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
