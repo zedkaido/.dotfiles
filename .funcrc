@@ -3,6 +3,42 @@ f() {
   find . -iname "*$1*"
 }
 
+status() {
+  if [ -n "$1" ]; then
+     printf "$1" > ~/SESSION
+  else
+      echo "what's the status?"
+  fi
+}
+
+log() {
+  if [ -n "$1" ]; then
+    output_directory="$HOME/zk/garden/"
+    mkdir -p "$output_directory"
+    current_date=$(date +'%Y-%m-%d')
+    output_file="$output_directory$current_date.md"
+    now=$(date +'%H:%M:')
+	 printf "\n* %s\n\t* LOG: %s;\n" "$now" "$1" >> "$output_file"
+    printf "$1" > ~/SESSION
+  else
+    echo "log what?"
+  fi
+}
+
+worklog() {
+  if [ -n "$1" ]; then
+    output_directory="$HOME/zk/garden/"
+    mkdir -p "$output_directory"
+    current_date=$(date +'%Y-%m-%d')
+    output_file="${output_directory}WL-${current_date}.md"
+    now=$(date +'%H:%M:')
+	 printf "\n* %s\n\t* LOG: %s;\n" "$now" "$1" >> "$output_file"
+    printf "$1" > ~/SESSION
+  else
+    echo "log what?"
+  fi
+}
+
 datediff () {
   echo $(( ($(date -u -d $1 +%s) - $(date -u -d $2 +%s)) / 86400))
 }
@@ -22,13 +58,13 @@ hexToString() {
     local ascii_string=""
     hex_string=$(echo "$hex_string" | tr -d '[:space:]')
     if [[ ! $hex_string =~ ^[0-9a-fA-F]+$ ]]; then
-        echo "Error: Invalid hexadecimal string."
-        return 1
+      echo "Error: Invalid hexadecimal string."
+      return 1
     fi
 	 # two characters at a time (one bite)
     for (( i = 0; i < ${#hex_string}; i += 2 )); do
-        byte="${hex_string:$i:2}"
-        ascii_string+=$(printf "\\x$byte")
+      byte="${hex_string:$i:2}"
+      ascii_string+=$(printf "\\x$byte")
     done
     echo -e "$ascii_string"
 }
