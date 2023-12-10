@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
 	name = Zed Kaido 
-	email = ekai@tuta.io
+	email = z@zedkaido.com 
 [init]
 	defaultBranch = master
 [core]
