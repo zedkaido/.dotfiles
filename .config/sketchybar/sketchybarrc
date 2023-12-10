@@ -27,14 +27,14 @@ sketchybar --bar height=24        \
 # https://felixkratz.github.io/SketchyBar/config/items
 
 sketchybar --default icon.font="JetBrains Mono:Bold:14.0"  \
-                     icon.color=0xff999999                 \
+                     icon.color=0xff999999                   \
                      label.font="JetBrains Mono:Bold:14.0" \
-                     label.color=0xff999999                \
-                     padding_left=5                        \
-                     padding_right=5                       \
-                     label.padding_left=4                  \
-                     label.padding_right=4                 \
-                     icon.padding_left=4                   \
+                     label.color=0xff999999                  \
+                     padding_left=5                          \
+                     padding_right=5                         \
+                     label.padding_left=4                    \
+                     label.padding_right=4                   \
+                     icon.padding_left=4                     \
                      icon.padding_right=4
 
 ##### Adding Mission Control Space Indicators #####
