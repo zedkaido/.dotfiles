@@ -5,7 +5,7 @@ echo "[TMUX] Select Project:"
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/zk ~/zk/projects ~/zk/work ~/.config -mindepth 1 -maxdepth 2 -type d | fzy)
+    selected=$(find ~/work ~/zk ~/zk/projects ~/zk/work ~/.config -mindepth 1 -maxdepth 2 -type d | fzy)
 fi
 
 if [[ -z $selected ]]; then
