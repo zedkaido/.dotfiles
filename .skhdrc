@@ -6,8 +6,8 @@
 # ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
 
 ## Aplication Shortucs
-cmd + shift - return : open -n /Applications/Alacritty.app
-cmd - i : open -n /Applications/Brave\ Browser.app
+cmd + shift - return : open -n /Applications/Kitty.app
+cmd - i : open -n /Applications/Vivaldi.app
 alt - o : open -n ~/Downloads
 alt - q : open -n /Applications/qutebrowser.app
 

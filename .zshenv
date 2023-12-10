@@ -1,6 +1,6 @@
 export GPG_TTY=$(tty)
 
-export BROWSER="qutebrowser"
+export BROWSER="/Applications/Vivaldi.app"
 export TERMINAL="alacritty"
 export EDITOR="nvim"
 export PAGER="less"
