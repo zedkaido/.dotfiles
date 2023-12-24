@@ -8,11 +8,11 @@ function git_branch() {
 }
 
 funciton relative_path() {
-	echo "%F{#696969}%~%f"
+	echo "%F{#888888}%~%f"
 }
 
 function lambda_symbol() {
-  echo "%F{#696969}λ%f"
+  echo "%F{#888888}λ%f"
 }
 
 function vi_mode_indicator() {
