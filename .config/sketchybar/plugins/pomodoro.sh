@@ -1,9 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
-POMO="$(zentime once)"
-
-if [ "$POMO" = "No zentime server running" ]; then
-	sketchybar --set "$NAME" label="$(cat ~/SESSION)"
-else
-	sketchybar --set "$NAME" label="$POMO | $(cat ~/SESSION)"
-fi
+# go install github.com/open-pomodoro/openpomodoro-cli/cmd/pomodoro@latest
+sketchybar --set "$NAME" label="$(~/go/bin/pomodoro status) | $(cat ~/SESSION)" 

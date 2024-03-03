@@ -10,6 +10,8 @@ alias vim="stty stop '' -ixoff ; nvim" # https://vim.fandom.com/wiki/Map_Ctrl-S_
 alias ec=emacsclient
 alias doom='$HOME/.emacs.d/bin/doom'
 
+alias pm='pomodoro'
+
 # ((https://github.com/zedkaido/.dotfiles))
 alias dot='$(which git) --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
